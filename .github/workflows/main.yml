@@ -21,3 +21,7 @@ jobs:
       run: ls -al /
     - name: Check bin
       run: ls -al /bin
+    - name: Check many dirs
+      run: ls -al /data /dev /etc /home /lib /srv
+    - name: Find git
+      run: which git
