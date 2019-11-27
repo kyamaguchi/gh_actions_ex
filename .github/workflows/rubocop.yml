@@ -16,4 +16,5 @@ jobs:
         uses: actions/setup-ruby@master
         with:
           ruby-version: ${{ matrix.ruby }}
+          architecture: 'x64'
       - run: ruby -v
