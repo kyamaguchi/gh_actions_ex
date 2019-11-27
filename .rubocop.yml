@@ -1,3 +1,7 @@
+Style/RedundantBegin:
+  Exclude:
+    - 'bin/**/*'
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 Metrics/LineLength:
