@@ -17,3 +17,18 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
       - run: ruby -v
+      - name: Set up bundler
+        run: gem install bundler
+
+      - name: Cache gems
+        uses: actions/cache@preview
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+
+      - name: bundle install
+        run: bundle install --path vendor/bundle
+      - name: Rubocop checks
+        run: bundle exec rubocop
