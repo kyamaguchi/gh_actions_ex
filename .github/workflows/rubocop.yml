@@ -17,6 +17,10 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
       - run: ruby -v
+      - name: apt-get
+        run: |
+          sudo apt-get update
+          sudo apt-get install libsqlite3-dev
       - name: Set up bundler
         run: gem install bundler
 
