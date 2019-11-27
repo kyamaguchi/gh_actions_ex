@@ -5,11 +5,15 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [ '2.5.x', '2.6.x', '3.x' ]
+    name: Ruby ${{ matrix.ruby }} sample
     steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Set up Ruby version
         uses: actions/setup-ruby@master
         with:
-          ruby-version : '2.6.x'
+          ruby-version: ${{ matrix.ruby }}
       - run: ruby -v
