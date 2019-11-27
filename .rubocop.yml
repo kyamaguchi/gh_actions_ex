@@ -20,5 +20,3 @@ Bundler/OrderedGems:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
-Style/RedundantBegin:
-  Enabled: false
