@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby: [ '2.5.x', '2.6.x', '3.x' ]
+        ruby: [ '2.5.x', '2.6.x' ]
     name: Ruby ${{ matrix.ruby }} sample
     steps:
       - name: Checkout
@@ -16,5 +16,4 @@ jobs:
         uses: actions/setup-ruby@master
         with:
           ruby-version: ${{ matrix.ruby }}
-          architecture: 'x64'
       - run: ruby -v
