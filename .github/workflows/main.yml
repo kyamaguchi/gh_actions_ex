@@ -7,6 +7,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Git log
+      run: git log --pretty=oneline
     - name: Hello world action step
       id: hello
       uses: kyamaguchi/hello-world-javascript-action@v1.0
