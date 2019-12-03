@@ -44,5 +44,3 @@ Style/StderrPuts:
   Enabled: false
 Style/StringLiterals:
   Enabled: false
-Style/SymbolArray:
-  Enabled: false
