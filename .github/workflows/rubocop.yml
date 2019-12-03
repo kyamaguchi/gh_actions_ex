@@ -34,5 +34,15 @@ jobs:
 
       - name: bundle install
         run: bundle install --path vendor/bundle
+      - name: Rubocop
+        run: |
+          mkdir -p rubocop_result
+          bundle exec rubocop -f o > rubocop_result/rubocop_offenses.txt
+          bundle exec rubocop -f h -o rubocop_result/rubocop.html
       - name: Rubocop checks
         run: bundle exec rubocop
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: rubocop-result
+          path: rubocop_result
