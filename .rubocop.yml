@@ -1,16 +1,38 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
 Style/RedundantBegin:
   Exclude:
     - 'bin/**/*'
 
 Bundler/OrderedGems:
   Enabled: false
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: false
+Layout/IndentFirstArgument:
+  Enabled: false
+Layout/IndentFirstArrayElement:
+  Enabled: false
 Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
 Metrics/LineLength:
+  Enabled: false
+Style/BlockComments:
+  Enabled: false
+Style/BlockDelimiters:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/Documentation:
+  Enabled: false
+Style/EmptyMethod:
   Enabled: false
 Style/ExpandPathArguments:
   Enabled: false
