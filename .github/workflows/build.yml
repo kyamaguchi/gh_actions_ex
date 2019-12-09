@@ -36,5 +36,17 @@ jobs:
         run: bundle install --path vendor/bundle
       - name: Rubocop checks
         run: bundle exec rubocop
+      - name: Rubocop stats
+        if: failure()
+        run: |
+          mkdir -p rubocop_result
+          bundle exec rubocop -f o > rubocop_result/rubocop_offenses.txt
+          bundle exec rubocop -f h -o rubocop_result/rubocop.html
       - name: RSpec
         run: bundle exec rspec
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: rubocop-result
+          path: rubocop_result
