@@ -36,3 +36,5 @@ jobs:
         run: bundle install --path vendor/bundle
       - name: Rubocop checks
         run: bundle exec rubocop
+      - name: RSpec
+        run: bundle exec rspec
