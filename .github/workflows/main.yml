@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Hello world action step
-        uses: ./private_hw_action/ # Uses an action in the root directory
+        uses: kyamaguchi/hello-world-javascript-action@spike
         id: hello
         with:
           who-to-greet: 'Private Mona the Octocat with ncc'
