@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Hello world action step
-        uses: kyamaguchi/hello-world-javascript-action@spike
+        uses: kyamaguchi/hello-world-javascript-action@9d6d9b5 # spike
         id: hello
         with:
           who-to-greet: 'Private Mona the Octocat with ncc'
