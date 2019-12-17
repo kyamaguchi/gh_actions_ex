@@ -16,11 +16,3 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
-      - name: Hello world docker action step
-        id: hello-docker
-        uses: kyamaguchi/hello-world-docker-action@607f021
-        with:
-          who-to-greet: 'Mona the Docker'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello-docker.outputs.time }}"
