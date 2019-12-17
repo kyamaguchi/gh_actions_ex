@@ -36,7 +36,7 @@ jobs:
         run: bundle install --path vendor/bundle
       - name: Hello world docker action step
         id: hello-docker
-        uses: kyamaguchi/hello-world-docker-action@607f021
+        uses: kyamaguchi/hello-world-docker-action@9e21156
         with:
           who-to-greet: 'Mona the Docker'
       # Use the output from the `hello` step
