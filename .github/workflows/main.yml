@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Hello world action step
-        uses: ./private_hw_action/ # Uses an action in the root directory
+        uses: kyamaguchi/hello-world-javascript-action@9254891
         id: hello
         with:
           who-to-greet: 'Private Mona the Octocat with ncc'
@@ -18,7 +18,7 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Hello world docker action step
         id: hello-docker
-        uses: kyamaguchi/hello-world-docker-action@9e21156
+        uses: kyamaguchi/hello-world-docker-action@8c2f67a
         with:
           who-to-greet: 'Mona the Docker'
       # Use the output from the `hello` step
